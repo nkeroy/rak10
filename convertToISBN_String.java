@@ -35,8 +35,8 @@ public class convertToISBN_String {
 		int differenceInValue = weightedSum % 11; // the difference to add to the weightedSum, should the weightedSum be not exactly divisible by 11
 		
 		// special exceptions where adding 10 to weightedSum is exactly divisible by 11 (two conditions below)
-		if (differenceInValue == 10 && (weightedSum + differenceInValue) % 11 == 0) return reducedProductID + "X";
-		if (differenceInValue == 1 && (weightedSum + (11 - differenceInValue)) % 11 == 0) return reducedProductID + "X";
+		if (differenceInValue == 10 && (weightedSum + differenceInValue) % 11 == 0) return reducedProductID + "x";
+		if (differenceInValue == 1 && (weightedSum + (11 - differenceInValue)) % 11 == 0) return reducedProductID + "x";
 		
 		if ((weightedSum + differenceInValue) % 11 == 0) return reducedProductID + differenceInValue; 
 		else return reducedProductID + (11 - differenceInValue); // (11 - differenceInValue) because sometimes you minus differenceInValue from weightedSum to get number divisble by 11..
